@@ -52,3 +52,46 @@ h1 {
     font-weight: bold;
     color: #1565c0;
 }
+.search-section {
+    margin-top: 35px;
+}
+
+.search-section input {
+    width: 320px;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-section input:focus {
+    border-color: #1565c0;
+}
+
+.search-text {
+    margin-top: 12px;
+    color: #555;
+}
+
+.enroll-btn {
+    margin-top: 25px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 10px;
+    background: #1565c0;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.enroll-btn:hover {
+    background: #0d47a1;
+}
+
+.message {
+    margin-top: 15px;
+    color: green;
+    font-weight: 600;
+}

@@ -1,11 +1,29 @@
-<nav>
+<nav class="navbar">
 
-    <h2>🎓 Student Course Portal</h2>
-
-    <div>
-        <a href="#">Home</a>
-        <a href="#">Courses</a>
-        <a href="#">Profile</a>
+    <div class="logo">
+        {{ title }}
     </div>
+
+    <ul class="nav-links">
+
+        <li>
+            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+                Home
+            </a>
+        </li>
+
+        <li>
+            <a routerLink="/courses" routerLinkActive="active">
+                Courses
+            </a>
+        </li>
+
+        <li>
+            <a routerLink="/profile" routerLinkActive="active">
+                Profile
+            </a>
+        </li>
+
+    </ul>
 
 </nav>
