@@ -1,135 +1,151 @@
-# Learning Notes
+# Docker Commands
 
-## What is Containerization?
+## Check Docker Version
 
-Containerization is a method of packaging an application along with all its dependencies so that it can run consistently across different environments.
-
----
-
-## What is Docker?
-
-Docker is an open-source platform used to build, package, distribute, and run applications inside lightweight containers.
+```bash
+docker --version
+```
 
 ---
 
-## Why Docker?
+## Display Docker Information
 
-- Lightweight
-- Fast deployment
-- Portable
-- Consistent environments
-- Easy scalability
-- Efficient resource usage
+```bash
+docker info
+```
 
 ---
 
-## Docker Architecture
+## Download an Image
 
-Docker consists of:
-
-- Docker Client
-- Docker Daemon
-- Docker Engine
-- Docker Registry (Docker Hub)
-- Docker Images
-- Docker Containers
+```bash
+docker pull ubuntu
+```
 
 ---
 
-## Docker Image
+## List Images
 
-A Docker Image is a read-only template used to create containers.
-
-Images contain:
-
-- Application
-- Runtime
-- Libraries
-- Dependencies
-- Configuration
+```bash
+docker images
+```
 
 ---
 
-## Docker Container
+## Run a Container
 
-A Docker Container is a running instance of a Docker Image.
-
-Containers are:
-
-- Lightweight
-- Isolated
-- Portable
-- Easy to start and stop
+```bash
+docker run ubuntu
+```
 
 ---
 
-## Docker Hub
+## Run Interactive Container
 
-Docker Hub is the official cloud repository where Docker Images are stored and shared.
+```bash
+docker run -it ubuntu
+```
 
 ---
 
-## Dockerfile
+## List Running Containers
 
-A Dockerfile is a text file containing instructions to automatically build a Docker Image.
+```bash
+docker ps
+```
 
-Common instructions include:
+---
 
-- FROM
-- WORKDIR
-- COPY
-- RUN
-- EXPOSE
-- CMD
+## List All Containers
+
+```bash
+docker ps -a
+```
+
+---
+
+## Stop a Container
+
+```bash
+docker stop <container_id>
+```
+
+---
+
+## Remove a Container
+
+```bash
+docker rm <container_id>
+```
+
+---
+
+## Remove an Image
+
+```bash
+docker rmi <image_name>
+```
+
+---
+
+## Build an Image
+
+```bash
+docker build -t myapp .
+```
+
+---
+
+## Run a Custom Image
+
+```bash
+docker run myapp
+```
+
+---
+
+## View Container Logs
+
+```bash
+docker logs <container_id>
+```
+
+---
+
+## Execute Commands Inside a Container
+
+```bash
+docker exec -it <container_id> bash
+```
+
+---
+
+## Pull hello-world Image
+
+```bash
+docker pull hello-world
+```
+
+---
+
+## Run hello-world Container
+
+```bash
+docker run hello-world
+```
 
 ---
 
 ## Docker Compose
 
-Docker Compose is used to define and manage multi-container applications using a YAML file.
+Start services
 
-Advantages:
+```bash
+docker compose up
+```
 
-- Easy service management
-- One command to start multiple containers
-- Better project organization
+Stop services
 
----
-
-## Docker Volumes
-
-Volumes are used to store persistent data outside the container.
-
-Benefits:
-
-- Data persistence
-- Easy backup
-- Shared storage
-
----
-
-## Docker Networks
-
-Docker Networks allow containers to communicate securely.
-
-Common types:
-
-- Bridge
-- Host
-- None
-
----
-
-## Benefits of Docker
-
-- Faster deployments
-- Consistent development environment
-- Easy scaling
-- Isolation
-- Better resource utilization
-
----
-
-## Summary
-
-Docker simplifies application deployment by packaging applications and their dependencies into lightweight, portable containers.![alt text](image.png)
+```bash
+docker compose down
+```
